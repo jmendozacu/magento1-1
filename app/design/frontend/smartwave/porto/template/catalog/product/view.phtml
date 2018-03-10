@@ -76,6 +76,7 @@ if(!Mage::getStoreConfig("porto_settings/header/sticky_header", $code))
                         <div class="sticky-detail">
                             <div class="product-name-area">
                                 <h2 class="product-name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h2>
+                                <h3><?php echo $_product->getSku() ?></h3>
                                 <?php echo $this->getPriceHtml($_product, false, '_clone') ?>
                             </div>
                             <?php
@@ -144,7 +145,6 @@ if(!Mage::getStoreConfig("porto_settings/header/sticky_header", $code))
                                 <div class="prev-next-products">
                                     <?php $_prev = Mage::helper('porto')->getPreviousProduct(); ?>
                                     <?php $_next = Mage::helper('porto')->getNextProduct(); ?>
-
                                     <?php if($_prev): ?>
                                         <div class="product-nav product-prev">
                                             <a href="<?php echo $_prev->getProductUrl();?>" title="<?php echo $this->__("Previous Product"); ?>">
@@ -177,6 +177,7 @@ if(!Mage::getStoreConfig("porto_settings/header/sticky_header", $code))
                             ?>
                             <div class="product-name">
                                 <h1 <?php if($enabled_richsnippets): ?>itemprop="name"<?php endif; ?>><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                                <h3><?php echo $_product->getSku() ?></h3>
                             </div>
                             <?php if($enabled_richsnippets): ?>
                                 <?php
