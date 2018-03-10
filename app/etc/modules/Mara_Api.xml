@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mara_Api>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Mara_Api>
+    </modules>
+</config>

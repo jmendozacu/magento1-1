@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Dever_Cart>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Dever_Cart>
+    </modules>
+</config>

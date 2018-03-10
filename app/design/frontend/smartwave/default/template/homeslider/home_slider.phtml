@@ -6,7 +6,7 @@ $type = Mage::getStoreConfig('homeslider/general/type', $code);
 $static_block_id = Mage::getStoreConfig('homeslider/general/static_block_id', $code);
 if($enabled == 1){
 ?>
-<div id="slideshow">
+<div id="slideshow" style="background-color: #000;">
 <?php
     echo $this->getLayout()->createBlock('cms/block')->setBlockId($static_block_id)->toHtml();
 ?>
