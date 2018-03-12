@@ -90,18 +90,19 @@ function beginNewsletterForm() {
 }
 </style>
 <div class="block block-subscribe" id="newsletter_popup">
-    <form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-popup-validate-detail" onsubmit="setNewsletterCookie()">
+    <form action="<?php echo $this->getUrl('devercustomer/account/createPost') ?>" method="post" id="newsletter-popup-validate-detail" onsubmit="setNewsletterCookie()">
         <div class="block-content">
-            <?php
-                if($popup["show_logo"]){
-            ?>
-                    <img src="<?php echo $this->getSkinUrl($popup["show_logo"]); ?>" alt="" />
-            <?php
-                }
-            ?>
+            <?php if($popup["show_logo"]): ?>
+                <img src="<?php echo $this->getSkinUrl($popup["show_logo"]); ?>" alt="" />
+            <?php endif; ?>
             <?php echo $popup['newsletter_content']; ?>
             <div class="input-box">
-                <input type="text" name="email" id="newsletter_popup_email" title="<?php echo $this->__('Sign up for our newsletter') ?>" class="input-text required-entry validate-email" placeholder="<?php echo $this->__("Email Address"); ?>" />
+                <input type="hidden" name="welcomepopup" id="welcomepopup" value="1" />
+                <?php $password = Mage::helper('core')->getRandomString($length = 7) ?>
+                <input type="hidden" name="password" id="password" title="<?php echo $this->__('Password') ?>" class="input-text required-entry validate-password" value="<?php echo $password?>"  />
+                <input type="hidden" name="confirmation" id="confirmation" title="<?php echo $this->__('Password') ?>" class="input-text required-entry validate-password" value="<?php echo $password?>"  />
+                <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
+                <input type="text" name="email" id="email" title="<?php echo $this->__('Email') ?>" class="input-text required-entry validate-email" placeholder="<?php echo $this->__("Email Address"); ?>" />
                 <button type="submit" title="<?php echo $this->__('Go!') ?>" class="button"><span><span><?php echo $this->__('Go!') ?></span></span></button>
                 <div class="clearer"></div>
             </div>
