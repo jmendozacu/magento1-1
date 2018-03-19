@@ -45,6 +45,11 @@
                         <class>Dever_Cart_Model_Observer</class>
                         <method>addFreeProduct</method>
                     </dever_cart_add_free_product>
+                    <dever_cart_add_bundle_product>
+                        <type>singleton</type>
+                        <class>Dever_Cart_Model_Observer</class>
+                        <method>addBundleProduct</method>
+                    </dever_cart_add_bundle_product>
                 </observers>
             </sales_quote_collect_totals_after>
         </events>

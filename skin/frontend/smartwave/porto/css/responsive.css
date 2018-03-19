@@ -1207,3 +1207,8 @@ body.boxed .page{width:320px}
 .rating-box .rating{float:left;height:12px;position:absolute;left:0;top:0;overflow:hidden}
 .rating-box .rating:before{font-family:"porto";content:"\e852\20\e852\20\e852\20\e852\20\e852";width:65px;height:12px;color:#ffc600;display:inline;font-size:11px;line-height:12px;white-space:nowrap}
 }
+.image-main-section{  margin-bottom:20px;  }
+.img-part{  border-radius: 5px;  margin:0px;  border:1px solid #DDDDDD;  background-color: #fff;  padding-bottom: 20px;  }
+.img-section{  padding: 5px;  }
+.img-section img{  width: 100%;  }
+.image-title h5{  margin:0px;  color:#4C4C4C;  padding: 15px 0px 8px 0px;  }

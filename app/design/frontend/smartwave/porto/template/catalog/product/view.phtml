@@ -229,6 +229,7 @@ if(!Mage::getStoreConfig("porto_settings/header/sticky_header", $code))
                             <h2><?php echo $this->__('Quick Overview') ?></h2>
                             <div class="std" <?php if($enabled_richsnippets): ?>itemprop="description"<?php endif; ?>><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                         </div>
+
                         <?php endif;?>
                         <?php if($custom_block_html && $move_custom_block):?>
                             <div class="short-custom-block">
@@ -245,6 +246,7 @@ if(!Mage::getStoreConfig("porto_settings/header/sticky_header", $code))
                             <?php if ($this->canEmailToFriend()): ?>
                                 <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
                             <?php endif; ?>
+
                             <?php if($sku = $_product->getSku()): ?>
                                 <?php if($enabled_richsnippets): ?><meta itemprop="productID" content="sku:<?php echo $sku; ?>" /><?php endif; ?>
                             <?php endif; ?>
@@ -285,10 +287,34 @@ if(!Mage::getStoreConfig("porto_settings/header/sticky_header", $code))
     </div>
     <?php endif; ?>
 
+    <?php if ($_products = $this->getBundleItems()): ?>
+        <div class="container">
+            <div class="row">
+                <span><h3 style="color:red;"><?php echo $this->__('Bundle Items Included') ?></h3></span>
+                <div class="row">
+                    <?php foreach ($_products as $each): ?>
+                        <?php $_product = Mage::getSingleton('catalog/product')->loadByAttribute('sku', $each) ?>
+                        <div class="col-md-2 col-sm-2 col-xs-12 image-main-section">
+                            <div class="row img-part">
+                                <div class="col-md-12 col-sm-12 colxs-12 img-section">
+                                    <img src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail')->resize(275); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'thumbnail'), null, true) ?>"/>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 image-title">
+                                    <h5><?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getName(), 'name') ?></h5>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
     <?php if ($_product->isSaleable() && $this->hasOptions()):?>
         <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
     <?php endif;?>
     </form>
+
     <?php if(Mage::getStoreConfig('ajaxcart/addtocart/enableproduct') && (Mage::app()->getFrontController()->getRequest()->getModuleName() == "catalog") || (Mage::app()->getFrontController()->getRequest()->getModuleName() == "quickview")): ?>
         <script type="text/javascript">
             //<![CDATA[
@@ -528,3 +554,5 @@ if(!Mage::getStoreConfig("porto_settings/header/sticky_header", $code))
         ?>
     });
 </script>
+<style>
+</style>

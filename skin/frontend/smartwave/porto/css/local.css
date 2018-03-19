@@ -3588,3 +3588,8 @@ container.type16 .compare-popup{font-weight:400}
 .header-container.type21 .header .form-search button.button{width: 50px;}
 .header-container.type21 .header .form-search button.button i:before{content: "\e884";}
 .header-container.type21 .header .custom-block a{font-size:12px}
+.image-main-section{  margin-bottom:20px;  }
+.img-part{  border-radius: 5px;  margin:0px;  border:1px solid #DDDDDD;  background-color: #fff;  padding-bottom: 20px;  }
+.img-section{  padding: 5px;  }
+.img-section img{  width: 100%;  }
+.image-title h5{  margin:0px;  color:#4C4C4C;  padding: 15px 0px 8px 0px;  }

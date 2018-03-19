@@ -3567,3 +3567,8 @@ i.ajax-loader.medium{width:24px;height:24px;border-width:2.5px}
 body{direction:rtl;unicode-bidi:embed}
 dt,dd{unicode-bidi:embed}
 /* RTL ONLY */
+.image-main-section{  margin-bottom:20px;  }
+.img-part{  border-radius: 5px;  margin:0px;  border:1px solid #DDDDDD;  background-color: #fff;  padding-bottom: 20px;  }
+.img-section{  padding: 5px;  }
+.img-section img{  width: 100%;  }
+.image-title h5{  margin:0px;  color:#4C4C4C;  padding: 15px 0px 8px 0px;  }
