@@ -226,10 +226,12 @@ class Dever_Catalog_Block_Product_View extends Mage_Catalog_Block_Product_Abstra
 
     public function getBundleItems()
     {
-        $debug = true;
         $product = Mage::registry('product');
         $bundleSkus = $product->getBundleSku();
-        $list = explode(',', $bundleSkus);
-        return $list;
+        if ($bundleSkus) {
+            $list = explode(',', $bundleSkus);
+            return $list;
+        }
+        return false;
     }
 }
