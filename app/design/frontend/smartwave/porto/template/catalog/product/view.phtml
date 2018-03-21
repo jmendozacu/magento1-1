@@ -303,12 +303,13 @@ if(!Mage::getStoreConfig("porto_settings/header/sticky_header", $code))
     </div>
     <?php endif; ?>
 
-    <?php if ($_products = $this->getBundleItems()): ?>
+    <?php $bundleSkus = $this->getBundleItems() ?>
+    <?php if ($bundleSkus): ?>
         <div class="container">
             <div class="row">
                 <span><h3 style="color:red;"><?php echo $this->__('Bundle Items Included') ?></h3></span>
                 <div class="row">
-                    <?php foreach ($_products as $each): ?>
+                    <?php foreach ($bundleSkus as $each): ?>
                         <?php $_product = Mage::getSingleton('catalog/product')->loadByAttribute('sku', $each) ?>
                         <div class="col-md-2 col-sm-2 col-xs-12 image-main-section">
                             <div class="row img-part">
