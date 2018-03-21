@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Mara_Api>
+			<version>0.0.1</version>
+		</Mara_Api>
+	</modules>
+	<global>
+		<events>
+			<sales_order_invoice_pay>
+				<observers>
+					<order_observer>
+						<class>Mara_Api_Model_Observer</class>
+						<method>sendOrder</method>
+						<type>singleton</type>
+					</order_observer>
+				</observers>
+			</sales_order_invoice_pay>
+		</events>
+	</global>
+	<!--<default>
+		<general>
+			<mara_api>
+				<api_url>https://mara.fareye.co/api/v1</api_url>
+			</mara_api>
+		</general>
+	</default>-->
+</config>
