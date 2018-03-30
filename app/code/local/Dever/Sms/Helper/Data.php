@@ -14,10 +14,10 @@ class Dever_Sms_Helper_Data extends Mage_Core_Helper_Abstract
 
     public function __construct()
     {
-        $this->_username = Mage::getStoreConfig('deverconfig/smsgateway/username');
-        $this->_password = Mage::getStoreConfig('deverconfig/smsgateway/password');
-        $this->_senderId = Mage::getStoreConfig('deverconfig/smsgateway/sender_id');
-        $this->_url = Mage::getStoreConfig('deverconfig/smsgateway/api_url');
+        $this->_username = Mage::getStoreConfig('general/smsgateway/username');
+        $this->_password = Mage::getStoreConfig('general/smsgateway/password');
+        $this->_senderId = Mage::getStoreConfig('general/smsgateway/sender_id');
+        $this->_url = Mage::getStoreConfig('general/smsgateway/api_url');
     }
 
     public function sendSms($order, $template)
