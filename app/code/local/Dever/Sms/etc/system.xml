@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-    <tabs>
-        <dever translate="label" module="dever_sms">
-            <label>Dever</label>
-            <sort_order>001</sort_order>
-        </dever>
-    </tabs>
     <sections>
-        <deverconfig translate="label" module="dever_sms">
-            <label>Configurations</label>
-            <tab>dever</tab>
-            <frontend_type>text</frontend_type>
-            <sort_order>100</sort_order>
-            <show_in_default>1</show_in_default>
-            <show_in_website>1</show_in_website>
-            <show_in_store>1</show_in_store>
+        <general>
             <groups>
                 <smsgateway translate="label">
                     <label>Sms Gateway</label>
@@ -68,6 +55,6 @@
                     </fields>
                 </smsgateway>
             </groups>
-        </deverconfig>
+        </general>
     </sections>
 </config>
