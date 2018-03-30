@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Dever_Sns>
+            <version>0.0.1</version>
+        </Dever_Sns>
+    </modules>
+    <global>
+        <helpers>
+            <dever_sms>
+                <class>Dever_Sms_Helper</class>
+            </dever_sms>
+        </helpers>
+        <models>
+            <dever_sms>
+                <class>Dever_Sms_Model</class>
+            </dever_sms>
+        </models>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <order_cod>
+                        <class>dever_sms_model_observer</class>
+                        <method>sendSmsCod</method>
+                    </order_cod>
+                </observers>
+            </sales_order_place_after>
+        </events>
+    </global>
+</config>

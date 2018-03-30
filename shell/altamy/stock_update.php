@@ -108,17 +108,23 @@ class Altamy_Product_Bulk_Stock_Update extends Mage_Shell_Abstract
                 }
 
                 $product->setStatus($row['status']);
+
+                print_r($row);
+                //print_r($product->getData());
+                //exit;
+
                 if ($product->save()) {
                     echo "Product update - {$product->getSku()} \n";
+                    //exit;
                 }
 
-                unset($product);
+                //unset($product);
             }
 
             //Rename file with timestamp
-            $date = date('Ymdhis');
-            $renamedFile = $this->_path . DS . 'stock_' . $date . '.xlsx';
-            rename("{$this->_file}", "{$renamedFile}");
+            //$date = date('Ymdhis');
+            //$renamedFile = $this->_path . DS . 'stock_' . $date . '.xlsx';
+            //rename("{$this->_file}", "{$renamedFile}");
 
         } catch (Exception $e) {
             echo (string)$e->getMessage();
