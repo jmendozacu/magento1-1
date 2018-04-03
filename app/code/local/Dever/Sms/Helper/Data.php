@@ -65,8 +65,8 @@ class Dever_Sms_Helper_Data extends Mage_Core_Helper_Abstract
         );
 
         // Extra params for sms
-        $data['mobileno'] = $content;
-        $data['msgtext'] = $phoneNumber;
+        $data['mobileno'] = $phoneNumber;
+        $data['msgtext'] = $content;
 
         $url = $this->_url . "?" . http_build_query($data);
         Mage::log($url, null, 'sms.log');
