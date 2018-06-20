@@ -54,8 +54,17 @@
                 </li>
             </ul>
         </div>
-        <?php echo $this->getChildHtml('topSearch') ?>
-        <?php echo $this->getChildHtml('topMenu') ?>
+
+<!--        <div class="quick-access">-->
+<!--            --><?php //echo $this->getChildHtml('topSearch') ?>
+<!--            <p class="welcome-msg">--><?php //echo $this->getChildHtml('welcome') ?><!-- --><?php //echo $this->getAdditionalHtml() ?><!--</p>-->
+<!--            --><?php //echo $this->getChildHtml('topLinks') ?>
+<!--            --><?php //echo $this->getChildHtml('store_language') ?>
+<!--        </div>-->
+
+        <?php //echo $this->getChildHtml('topSearch') ?>
+
+        <?php echo $this->getLayout()->createBlock('page/html_topmenu')->setTemplate('page/homepage/html/topmenu.phtml')->toHtml() ?>
         <!--<div class="cart-mobile">
             <div class="cart">
                 <img class="img-responsive float-left" src="<?php /*echo $this->getSkinUrl('images/custom/cart.png') */?>">

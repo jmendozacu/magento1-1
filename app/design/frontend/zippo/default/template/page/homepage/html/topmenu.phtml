@@ -32,10 +32,19 @@
  */
 ?>
 <?php $_menu = $this->getHtml('level-top') ?>
-<?php if($_menu): ?>
+<?php /*if($_menu): */?><!--
 <div class="nav-container">
     <ul id="nav">
+        <?php /*echo $_menu */?>
+    </ul>
+</div>
+--><?php /*endif */?>
+
+<?php if($_menu): ?>
+<div id="navbarNavDropdown" class="col-md-10 col-xs-12 navbar-collapse collapse my-nav" >
+    <ul class="navbar-nav mr-auto col-md-12 col-xs-12 drop-down my-drop-down">
+        <div class="col-md-2"></div>
         <?php echo $_menu ?>
     </ul>
 </div>
-<?php endif ?>
+<?php endif; ?>
