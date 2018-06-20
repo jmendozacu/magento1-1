@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Magegiant_Dailydeal>
-            <active>true</active>
+            <active>false</active>
             <codePool>local</codePool>
         </Magegiant_Dailydeal>
     </modules>

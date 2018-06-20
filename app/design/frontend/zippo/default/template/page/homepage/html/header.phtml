@@ -1,0 +1,66 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light row col-md-12 my-top-nav"style="position:absolute;z-index:1;padding:0%!important; background:rgba(255,255,255,0)">
+        <a class="navbar-brand col-md-2 col-xs-3 logoo" href="#"><img src="<?php echo $this->getSkinUrl('images/custom/logo.jpg') ?>" style="width:80%;" class="img-responsive" alt="Ignovate"></a>
+        <button class="navbar-toggler" style="position:relative;top:-9px;left:-87px;" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"style="position:relative;top:0px;left:0px;" ></span>
+        </button>
+
+        <div class="col-md-1"></div>
+        <div class="col-md-8 top-nav-bar">
+            <ul>
+                <li class="nav-item nav-item1">
+                    <a class="nav-link" href="<?php echo $this->getUrl() ?>customer/account"><h5><?php echo $this->__('My Account') ?></h5></a>
+                </li>
+                <li class="nav-item nav-item1">
+                    <a class="nav-link" href="<?php echo $this->getUrl() ?>wishlist"><h5><?php echo $this->__('My Wishlist') ?></h5></a>
+                </li>
+                <li class="nav-item nav-item1">
+                    <a class="nav-link" href="<?php echo $this->getUrl() ?>checkout/cart"><h5><?php echo $this->__('My Cart') ?></h5></a>
+                </li>
+                <li class="nav-item nav-item1">
+                    <a class="nav-link" href="<?php echo $this->getUrl() ?>customer/account/login"><h5><?php echo $this->__('Login') ?></h5></a>
+                </li>
+                <li class="nav-item nav-item1">
+                    <a class="nav-link" href="<?php echo $this->getUrl() ?>contacts"><h5><?php echo $this->__('Contact Us') ?></h5></a>
+                </li>
+            </ul>
+        </div>
+        <?php echo $this->getChildHtml('topSearch') ?>
+        <?php echo $this->getChildHtml('topMenu') ?>
+        <!--<div class="cart-mobile">
+            <div class="cart">
+                <img class="img-responsive float-left" src="<?php /*echo $this->getSkinUrl('images/custom/cart.png') */?>">
+                <b>Cart<span style="color:red">(0)</span></b>
+            </div>
+        </div>-->
+    </nav>
+</div>

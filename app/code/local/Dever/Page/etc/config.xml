@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Dever_Page>
+            <version>0.0.1</version>
+        </Dever_Page>
+    </modules>
+    <global>
+        <blocks>
+            <class>Dever_Page_Block</class>
+            <page>
+                <rewrite>
+                    <html_head>Dever_Page_Block_Html_Head</html_head>
+                    <html_header>Dever_Page_Block_Html_Header</html_header>
+                    <html_footer>Dever_Page_Block_Html_Footer</html_footer>
+                    <html_topmenu>Dever_Page_Block_Html_Topmenu</html_topmenu>
+                </rewrite>
+            </page>
+        </blocks>
+        <page>
+            <layouts>
+                <homepage module="page" translate="label">
+                    <label>Homepage</label>
+                    <template>page/homepage.phtml</template>
+                    <layout_handle>page_homepage</layout_handle>
+                </homepage>
+            </layouts>
+        </page>
+    </global>
+</config>
