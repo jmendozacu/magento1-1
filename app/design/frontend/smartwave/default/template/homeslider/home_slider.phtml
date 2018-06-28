@@ -7,9 +7,44 @@ $static_block_id = Mage::getStoreConfig('homeslider/general/static_block_id', $c
 if($enabled == 1){
 ?>
 <div id="slideshow" style="background-color: #000;">
+
 <?php
     echo $this->getLayout()->createBlock('cms/block')->setBlockId($static_block_id)->toHtml();
 ?>
+
+    <div class="banner-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="borderBox">
+                        <div class="innerBox">
+                            <h4><i class="icon-arrow"></i>Super Savers</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy <a href="" >Read more</a> </p>
+                            <img src="<?php echo $this->getSkinUrl('images/1.png'); ?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="borderBox">
+                        <div class="innerBox">
+                            <h4>New Arrivals</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy <a href="" >Read more</a> </p>
+                            <img src="<?php echo $this->getSkinUrl('images/2.png'); ?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="borderBox">
+                        <div class="innerBox">
+                            <h4>Bundle Offers</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy <a href="" >Read more</a> </p>
+                            <img src="<?php echo $this->getSkinUrl('images/3.png'); ?>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <?php    
 } else {
