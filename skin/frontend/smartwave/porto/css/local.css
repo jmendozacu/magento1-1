@@ -309,7 +309,7 @@ tr.summary-details-excluded{font-style:italic}
 .header .logo img{max-width:100%}
 .header-container .welcome-msg{margin:3px 20px 3px 0;text-align:left;float:right;font-size:11px;line-height:19px;text-transform:uppercase}
 .header-container .welcome-msg a{color:#7dbd22}
-.header #search_mini_form{display:inline-block;vertical-align:middle;margin-right:35px}
+.header #search_mini_form{vertical-align:middle;margin-right:35px}
 .header .form-search{overflow:visible;border:1px solid #ccc;border-radius:20px;position:relative;width:100%;min-width:250px;padding-right:25px;background-color:#fff}
 .header .form-search label{float:left;width:24px;height:21px;text-align:left;text-indent:-999em;overflow:hidden;display:none}
 .header .form-search #search{border:0;height:38px;background-color:transparent;padding:10px 15px;color:#999;font-family:Arial;width:100%;margin:0;font-size:13px;line-height:20px;border-radius:20px 0 0 20px}

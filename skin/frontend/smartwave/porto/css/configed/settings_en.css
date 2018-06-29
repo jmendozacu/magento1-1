@@ -2,8 +2,8 @@
  * WARNING: Do not change this file. Your changes will be lost.
  * 2018-03-10 10:42:45 */
 
-    .catalog-category-view .breadcrumbs > .container, .catalogsearch-result-index .breadcrumbs > .container, .catalog-category-view .main-container > .container, .catalogsearch-result-index .main-container > .container { width: 100%; }
-	
+    /*.catalog-category-view .breadcrumbs > .container, .catalogsearch-result-index .breadcrumbs > .container, .catalog-category-view .main-container > .container, .catalogsearch-result-index .main-container > .container { width: 100%; }*/
+
     @media (min-width:1280px){
         .catalog-category-view .breadcrumbs > .container, .catalogsearch-result-index .breadcrumbs > .container, .catalog-category-view .main-container > .container, .catalogsearch-result-index .main-container > .container { padding: 0 20px }
         .catalog-category-view  .col2-left-layout .col-main { width: 80%; }
