@@ -101,3 +101,20 @@
 <?php //echo $this->getAbsoluteFooter() ?>
 </body>
 </html>
+<script>
+    jQuery(document).click(function(){
+        jQuery('.filter-wrapper .dropdown-menu').hide();
+    });
+    jQuery(".filter-wrapper .dropdown-toggle").click(function(e){
+        e.stopPropagation();
+    });
+
+    jQuery(".filter-wrapper .dropdown-toggle").click(function(){
+        jQuery('.filter-wrapper .dropdown-menu').hide();
+        jQuery(this).next(".dropdown-menu").toggle();
+    });
+    jQuery(".filter-wrapper .dropdown-menu li a").click(function(){
+        var selText = jQuery(this).text();
+        jQuery(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+    });
+</script>

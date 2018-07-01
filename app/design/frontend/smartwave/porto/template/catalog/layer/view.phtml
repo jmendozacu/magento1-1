@@ -1,4 +1,6 @@
+<div class="inner-banner"><img src="<?php echo $this->getSkinUrl('images/banner.jpg'); ?>" /></div>
 <?php if($this->canShowBlock()): ?>
+<div class="filter-wrapper">
 <div class="block block-layered-nav">
     <div class="block-content">
         <?php echo $this->getStateHtml() ?>
@@ -6,15 +8,18 @@
             <div class="actions"><a href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
         <?php endif; ?>
         <?php if($this->canShowOptions()): ?>
-            <dl id="narrow-by-list">
+        <div class="filterss">
                 <?php $_filters = $this->getFilters() ?>
                 <?php foreach ($_filters as $_filter): ?>
                 <?php if($_filter->getItemsCount()): ?>
-                    <dt><?php echo $this->__($_filter->getName()) ?></dt>
-                    <dd><?php echo $_filter->getHtml() ?></dd>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><?php echo $this->__($_filter->getName()) ?>
+                    <span class="caret"></span></button>
+                    <?php echo $_filter->getHtml() ?>
+                </div>
                 <?php endif; ?>
                 <?php endforeach; ?>
-            </dl>
+        </div>
             <script type="text/javascript">decorateDataList('narrow-by-list')</script>
             <script type="text/javascript">
                 jQuery(function($){
@@ -31,5 +36,6 @@
             </script>
         <?php endif; ?>
     </div>
+</div>
 </div>
 <?php endif; ?>
