@@ -45,11 +45,12 @@
         <div class="main-container col2-left-layout">
             <div class="main container">
                 <div class="row">
-                    <div class="col-main col-sm-9 f-right">
+                    <div class="col-md-12"><?php echo $this->getChildHtml('left') ?></div>
+                    <div class="col-md-12 ">
                         <?php echo $this->getChildHtml('global_messages') ?>
                         <?php echo $this->getChildHtml('content') ?>
                     </div>
-                    <div class="col-left sidebar f-left col-sm-3"><?php echo $this->getChildHtml('left') ?></div>
+
                 </div>
             </div>
         </div>
