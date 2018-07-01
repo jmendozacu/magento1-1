@@ -59,11 +59,48 @@
             </div>
         </div>
         <?php echo $this->getChildHtml('bottomContainer') ?>
-        <?php echo $this->getChildHtml('footer') ?>
+        <?php //echo $this->getChildHtml('footer') ?>
         <?php echo $this->getChildHtml('global_cookie_notice') ?>
         <?php echo $this->getChildHtml('before_body_end') ?>
     </div>
 </div>
-<?php echo $this->getAbsoluteFooter() ?>
+<div class="footer-container">
+    <footer id="footer" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="extra_content hook_displayFooter" id="extra_content_displayFooter_22">
+                    <ul class="footer-icons-left">
+                        <li>© 2018 Zippo.ae Place of Registration: Dubai. Al Tamy General Trading
+                            Al Was Bldg., Baniyas Square Deira, Dubai - UAE. P.O.BOX: 15674<br>
+                            Tel: +971 4 2288846 | Fax: +971 4 2288842
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="extra_content hook_displayFooter" id="extra_content_displayFooter_22">
+                    <ul class="footer-icons-right">
+                        <li class="footer-txt"><a href="<?php echo $this->getUrl('privacy-policy') ?>">Privacy<br>and Legal</a></li>
+                        <li class="footer-icon fb">
+                            <a href="http://www.facebook.com/Zippo" target="_blank"><i class="icon-facebook"></i></a>
+                        </li>
+                        <li class="footer-icon yt">
+                            <a href="http://www.youtube.com/zippo" target="_blank"><i class="icon-youtube"></i></a>
+                        </li>
+                        <li class="footer-icon ig">
+                            <a href="http://www.instagram.com/originalzippo" target="_blank"><i class="icon-insta"></i></a>
+                        </li>
+                        <li class="footer-icon tw">
+                            <a href="http://twitter.com/#!/zippo" target="_blank">
+                                <i class="icon-twitter"></i></a>
+                        </li>
+                        <li class="footer-icon flame"><a href="/">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<?php //echo $this->getAbsoluteFooter() ?>
 </body>
 </html>
