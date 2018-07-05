@@ -1008,7 +1008,7 @@ div.star-rating a{transition:initial}
 .alert-price{margin:0;font-size:11px}
 .alert-stock{margin:0;font-size:11px}
 .price{white-space:nowrap!important}
-.price-box{margin:10px 0 5px}
+.price-box{margin:10px 0 5px; min-height: 22px;}
 .price-box .price{font-weight:600;color:#444}
 .price-box a{display:inline-block;vertical-align:middle;line-height:20px}
 .regular-price{color:#444}
