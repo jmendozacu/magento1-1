@@ -3741,3 +3741,4 @@ body{padding-bottom: 61px;}
 .header-container.type21 .search-area .search-icon{ display: block!important}
 #search_mini_form .form-search { display: none;}
 #search_mini_form.show .form-search { display: block;}
+.cms-index-index .page .main.container{ display: none;}
