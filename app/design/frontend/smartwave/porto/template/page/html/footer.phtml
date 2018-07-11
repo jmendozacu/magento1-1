@@ -4,7 +4,7 @@
     $footer = Mage::getStoreConfig('porto_settings/footer',$code);
     $footer_class = ($footer['fixed_position_footer_enabled'])?" fixed-position":"";
 ?>
-<div class="footer-container <?php echo $footer_class; ?>">
+<div class="footer-container <?php echo $footer_class; ?>" style="display: none!important">
     <div class="footer">
     <?php
         if( $footer['footer_top_enabled'] ){
