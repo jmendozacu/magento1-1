@@ -36,11 +36,11 @@
             <dever_shipping>
                 <class>Dever_Shipping_Model</class>
             </dever_shipping>
-            <shipping>
+            <!--<shipping>
                 <rewrite>
                     <carrier_flatrate>Dever_Shipping_Model_Carrier_Flatrate</carrier_flatrate>
                 </rewrite>
-            </shipping>
+            </shipping>-->
         </models>
         <helpers>
             <dever_shipping>
