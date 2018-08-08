@@ -210,7 +210,7 @@ body.cms-index-index{ background: #fff; background-image: none;}
 .mini-cart span.cart-info  span.cart-qty,.mini-cart span.cart-info{display: inline!important; position:static!important; background: none!important;}
 .menu li:hover,.header-container.type21 .main-nav ul.menu>li.act{ background: none!important}
 #slideshow{position: relative;}
-#slideshow .banner-overlay{ position: absolute; bottom: 50px; right:0; left:0; z-index: 10;}
+#slideshow .banner-overlay{ position: absolute; bottom: 50px; right:0; left:0; z-index: 5;}
 #slideshow .banner-overlay .borderBox{background: rgba(0, 0, 0, .4);border-radius:20px;padding: 10px;}
 #slideshow .banner-overlay .borderBox .innerBox{ background: rgba(0, 0, 0, .6);padding: 20px; border-radius:20px; text-align: left; color: #fff;}
 .borderBox .innerBox h4{ color: #fff; text-transform: uppercase; font-size: 15px;}
