@@ -49,7 +49,6 @@ ul,ol{list-style:none;margin:0;padding:0}
 .theme-border-color{border-color:#08c}
 .theme-hover-color:hover{color:#08c}
 .theme-hover-bg-color:hover{background-color:#08c}
-.page{background-color:#fff;padding:0}
 .page-print{background:#fff;padding:25px 30px;text-align:right}
 .page-empty{background:#fff;padding:20px;text-align:right}
 .page-popup{background:#fff;padding:25px 30px;text-align:right}
@@ -310,7 +309,7 @@ tr.summary-details-excluded{font-style:italic}
 .header-container .welcome-msg{margin:3px 0 3px 20px;text-align:right;float:left;font-size:11px;line-height:19px;text-transform:uppercase}
 .header-container .welcome-msg a{color:#7dbd22}
 .header #search_mini_form{display:inline-block;vertical-align:middle;margin-left:35px}
-.header .form-search{overflow:visible;border:1px solid #ccc;border-radius:20px;position:relative;width:100%;min-width:250px;padding-left:170px;background-color:#fff}
+.header .form-search{overflow:visible;border:1px solid #ccc;border-radius:20px;position:relative;width:100%;min-width:250px;background-color:#fff}
 .header .form-search label{float:right;width:24px;height:21px;text-align:right;text-indent:-999em;overflow:hidden;display:none}
 .header .form-search #search{border:0;height:38px;background-color:transparent;padding:10px 15px;color:#999;font-family:Arial;width:100%;margin:0;font-size:13px;line-height:20px;border-radius:20px 20px 0 0}
 .header .form-search #cat{margin:0;width:130px;height:38px;background-color:transparent;border:1px solid #ccc;border-top:0;border-bottom:0;font-family:Arial;font-size:13px;line-height:34px;color:#777;padding:2px 0;padding-right:10px;position:absolute;left:40px;border-radius:0;-moz-appearance:none;-webkit-appearance:none}
@@ -325,7 +324,7 @@ tr.summary-details-excluded{font-style:italic}
 .header-container .form-language,.header-container .form-currency{display:block;float:right;margin-left:8px}
 .header-container .form-language select,.header-container .form-currency select{display:none}
 .header-container .links{display:block;float:left;padding:0;margin:3px 0;color:#08c}
-.header-container .top-links-area{display:block;float:left;padding:0;position:relative}
+.header-container .top-links-area{display:block;float:right!important;padding:0;position:relative}
 .header-container .top-links a{color:#999}
 .header-container .top-links-area a{padding-top:5px;padding-bottom:5px}
 .header-container .top-links .selectbox li a:hover{color:#fff}
@@ -533,7 +532,7 @@ tr.summary-details-excluded{font-style:italic}
 .header-container.type6 .header{display:block;vertical-align:middle;padding:28px 0}
 .header-container.type6 .header > .logo{display:block;padding:0 15px;margin:0 0 0 10px;float:right}
 .header-container.type6 .header > .logo img{height:50px}
-.header-container.type6 .header .search-area{position:relative;margin:0;display:block;float:right;top:0;right:0;height:50px;z-index:2}
+.header-container.type6 .header .search-area{position:relative;margin:0;display:block;float:left;top:0;right:0;height:50px;z-index:2}
 .header-container.type6 .header .search-area a.search-icon{display:block;line-height:50px;margin-left:25px}
 .header-container.type6 .header #search_mini_form{display:none;width:0;margin:0}
 .header-container.type6 .header .form-search{width:450px;position:absolute;right:-50px;top:50px;overflow:visible;border-width:5px;border-radius:25px;border-color:#ccc}
@@ -3688,7 +3687,9 @@ ul.footer-icons-right li.ig a { background-image: url(../images/icon-ftr-ig.png)
 ul.footer-icons-right li.tw a { background-image: url(../images/icon-ftr-tw.png);}
 ul.footer-icons-right li.flame a { background-image: url(../images/icon-flame.png);}
 body{padding-bottom: 61px;}
-.header-container.type21 .search-area .search-icon{ display: block!important;float: right;
+.top-links-area{
+    float: right;}
+.header-container.type21 .search-area .search-icon{ display: block!important;float: left;
     position: relative;
     top: 10px;}
 #search_mini_form{ display: none;
@@ -3742,3 +3743,8 @@ body{padding-bottom: 61px;}
 #search_mini_form .form-search { display: none;}
 #search_mini_form.show .form-search { display: block;}
 .cms-index-index .page .main.container{ display: none;}
+.breadcrumbs li a,.breadcrumbs li { color:#fff!important}
+.container {
+    max-width: 1170px!important;
+}
+.header .form-search #search{ width: 90%;}
